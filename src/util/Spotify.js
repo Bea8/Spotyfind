@@ -1,5 +1,5 @@
 const clientID = '6e6c5345a9a54f088fd8ae901027ae4d';
-const redirectURI = 'http://localhost:3000/';
+const redirectURI = 'https://beatamaj.website/src/Spotyfind/';
 let accessToken = '';
 
 export const Spotify = {
@@ -15,7 +15,7 @@ export const Spotify = {
     accessToken = newAccessToken[1];
     let expirationTime = Number(expiresIn[1]);
 
-    window.setTimeout(() => accessToken = '', expirationTime * 10000);
+    window.setTimeout(() => accessToken = '', expirationTime * 1000);
     window.history.pushState('Access Token', null, '/');
 
     return accessToken;
